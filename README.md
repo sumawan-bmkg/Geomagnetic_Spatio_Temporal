@@ -208,6 +208,8 @@ This project represents a significant breakthrough in earthquake precursor detec
 ### Contact
 For research collaboration, methodology questions, or operational deployment inquiries, please refer to the certification documentation and technical guides.
 
+https://github.com/sumawan-bmkg/Geomagnetic_Spatio_Temporal/blob/main/visual_abstract.png
+
 ---
 
 **Certification Status**: 🟡 CONDITIONALLY CERTIFIED FOR Q1 RESEARCH  
