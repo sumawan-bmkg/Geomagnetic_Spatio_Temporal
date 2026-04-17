@@ -1,0 +1,130 @@
+# Training Configuration for Spatio-Temporal Earthquake Precursor Model
+# This configuration defines the complete training pipeline with stage-wise learning
+
+# Model Architecture Configuration
+model:
+  n_stations: 8
+  n_components: 3
+  efficientnet_pretrained: true
+  gnn_hidden_dim: 256
+  gnn_num_layers: 3
+  dropout_rate: 0.2
+  magnitude_classes: 5
+
+# Data Configuration
+data:
+  batch_size: 16
+  num_workers: 4
+  pin_memory: true
+  load_in_memory: false
+  magnitude_bins: [4.0, 4.5, 5.0, 5.5, 6.0]
+
+# Loss Configuration
+loss_weights:
+  binary_weight: 1.0
+  magnitude_weight: 1.0
+  localization_weight: 1.0
+  focal_alpha: 1.0
+  focal_gamma: 2.0
+
+# Stage 1: Binary Precursor Detection
+stage_1:
+  epochs: 30
+  patience: 10
+  train_backbone: true
+  train_gnn: true
+  save_best: true
+  checkpoint_interval: 10
+  
+  optimizer:
+    type: AdamW
+    lr: 1.0e-4
+    weight_decay: 1.0e-4
+    betas: [0.9, 0.999]
+  
+  scheduler:
+    type: CosineAnnealingLR
+    T_max: 30
+    eta_min: 1.0e-6
+
+# Stage 2: Magnitude Classification
+stage_2:
+  epochs: 40
+  patience: 15
+  load_previous_best: true
+  train_backbone: true
+  train_gnn: true
+  save_best: true
+  checkpoint_interval: 10
+  
+  optimizer:
+    type: AdamW
+    lr: 5.0e-5
+    weight_decay: 1.0e-4
+    betas: [0.9, 0.999]
+  
+  scheduler:
+    type: CosineAnnealingLR
+    T_max: 40
+    eta_min: 1.0e-6
+
+# Stage 3: Localization Estimation
+stage_3:
+  epochs: 50
+  patience: 20
+  load_previous_best: true
+  train_backbone: true
+  train_gnn: true
+  save_best: true
+  checkpoint_interval: 10
+  
+  optimizer:
+    type: AdamW
+    lr: 2.0e-5
+    weight_decay: 1.0e-4
+    betas: [0.9, 0.999]
+  
+  scheduler:
+    type: CosineAnnealingLR
+    T_max: 50
+    eta_min: 1.0e-6
+
+# Alternative configurations for different scenarios
+
+# Fast training configuration (for testing)
+fast_config:
+  stage_1:
+    epochs: 5
+    patience: 3
+  stage_2:
+    epochs: 5
+    patience: 3
+  stage_3:
+    epochs: 5
+    patience: 3
+
+# High-performance configuration (for production)
+production_config:
+  data:
+    batch_size: 32
+    load_in_memory: true
+  
+  model:
+    gnn_hidden_dim: 512
+    gnn_num_layers: 4
+    dropout_rate: 0.1
+  
+  stage_1:
+    epochs: 50
+    optimizer:
+      lr: 5.0e-5
+  
+  stage_2:
+    epochs: 60
+    optimizer:
+      lr: 2.0e-5
+  
+  stage_3:
+    epochs: 80
+    optimizer:
+      lr: 1.0e-5

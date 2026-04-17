@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-04-15T16:39:56.935746",
+  "dataset_path": "real_earthquake_dataset.h5",
+  "validation_checks": {
+    "file_structure": {
+      "file_exists": true,
+      "file_size_mb": 28626.104895591736,
+      "required_groups_present": [
+        "metadata",
+        "config",
+        "station_coordinates",
+        "kp_index"
+      ],
+      "required_datasets_present": [
+        "scalogram_tensor"
+      ],
+      "structure_valid": true
+    },
+    "tensor_data": {
+      "tensor_present": true,
+      "correct_shape": true,
+      "correct_dtype": true,
+      "data_range_valid": true,
+      "no_nan_inf": true,
+      "non_zero_data": true
+    },
+    "metadata": {
+      "metadata_group_present": true,
+      "event_ids_present": false,
+      "magnitudes_present": false,
+      "coordinates_present": false,
+      "datetime_present": true,
+      "data_consistency": true
+    },
+    "integration": {
+      "integration_info_present": true,
+      "source_file_documented": true,
+      "batch_processing_used": true,
+      "target_shape_documented": true
+    },
+    "training_readiness": {
+      "tensor_shape_correct": true,
+      "sufficient_samples": true,
+      "memory_requirements_reasonable": true,
+      "data_quality_acceptable": true
+    }
+  },
+  "final_status": "MOSTLY_READY",
+  "validation_summary": {
+    "total_categories": 5,
+    "passed_categories": 4,
+    "success_rate": 80.0
+  }
+}

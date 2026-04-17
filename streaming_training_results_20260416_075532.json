@@ -1,0 +1,366 @@
+{
+  "training_history": {
+    "stage_1": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5380494384840131,
+        "val_loss": 1.5418952345848083
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.4904580142349005,
+        "val_loss": 2.33298681974411
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.4602610059827566,
+        "val_loss": 4.784710478782654
+      }
+    ],
+    "stage_2": [
+      {
+        "epoch": 1,
+        "train_loss": 2.00077053591609,
+        "val_loss": 0.8070429623126983
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.2562503026425837,
+        "val_loss": 1.161583423614502
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.3738072633743286,
+        "val_loss": 1.5058899402618409
+      }
+    ],
+    "stage_3": [
+      {
+        "epoch": 1,
+        "train_loss": 1.220700514987111,
+        "val_loss": 1.262162834405899
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.0594896332919597,
+        "val_loss": 3.0567318558692933
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.068125362098217,
+        "val_loss": 2.511345148086548
+      }
+    ]
+  },
+  "duration_hours": 0.02083349519305759,
+  "memory_stats": [
+    {
+      "stage": "before_dataset_creation",
+      "used_gb": 5.428459167480469,
+      "percent": 34.4,
+      "timestamp": "2026-04-16T07:54:17.405117"
+    },
+    {
+      "stage": "after_dataset_creation",
+      "used_gb": 5.439495086669922,
+      "percent": 34.4,
+      "timestamp": "2026-04-16T07:54:17.410196"
+    },
+    {
+      "stage": "before_model_creation",
+      "used_gb": 5.441875457763672,
+      "percent": 34.4,
+      "timestamp": "2026-04-16T07:54:17.412832"
+    },
+    {
+      "stage": "after_model_creation",
+      "used_gb": 5.512664794921875,
+      "percent": 34.9,
+      "timestamp": "2026-04-16T07:54:17.495904"
+    },
+    {
+      "stage": "before_training",
+      "used_gb": 5.528682708740234,
+      "percent": 35.0,
+      "timestamp": "2026-04-16T07:54:17.498524"
+    },
+    {
+      "stage": "stage_1_epoch_0_batch_0",
+      "used_gb": 5.303478240966797,
+      "percent": 33.6,
+      "timestamp": "2026-04-16T07:54:19.485708"
+    },
+    {
+      "stage": "stage_1_epoch_0_batch_10",
+      "used_gb": 5.3091583251953125,
+      "percent": 33.6,
+      "timestamp": "2026-04-16T07:54:20.660638"
+    },
+    {
+      "stage": "stage_1_epoch_0_batch_20",
+      "used_gb": 5.335716247558594,
+      "percent": 33.8,
+      "timestamp": "2026-04-16T07:54:22.025849"
+    },
+    {
+      "stage": "stage_1_epoch_0_batch_30",
+      "used_gb": 5.4628448486328125,
+      "percent": 34.6,
+      "timestamp": "2026-04-16T07:54:23.733453"
+    },
+    {
+      "stage": "stage_1_epoch_0_batch_40",
+      "used_gb": 5.414676666259766,
+      "percent": 34.3,
+      "timestamp": "2026-04-16T07:54:25.077212"
+    },
+    {
+      "stage": "stage_1_epoch_1_batch_0",
+      "used_gb": 5.434112548828125,
+      "percent": 34.4,
+      "timestamp": "2026-04-16T07:54:27.563402"
+    },
+    {
+      "stage": "stage_1_epoch_1_batch_10",
+      "used_gb": 5.668586730957031,
+      "percent": 35.9,
+      "timestamp": "2026-04-16T07:54:29.031243"
+    },
+    {
+      "stage": "stage_1_epoch_1_batch_20",
+      "used_gb": 5.617641448974609,
+      "percent": 35.5,
+      "timestamp": "2026-04-16T07:54:30.600705"
+    },
+    {
+      "stage": "stage_1_epoch_1_batch_30",
+      "used_gb": 5.664760589599609,
+      "percent": 35.8,
+      "timestamp": "2026-04-16T07:54:32.301788"
+    },
+    {
+      "stage": "stage_1_epoch_1_batch_40",
+      "used_gb": 5.673007965087891,
+      "percent": 35.9,
+      "timestamp": "2026-04-16T07:54:33.847349"
+    },
+    {
+      "stage": "stage_1_epoch_2_batch_0",
+      "used_gb": 5.449329376220703,
+      "percent": 34.5,
+      "timestamp": "2026-04-16T07:54:36.472577"
+    },
+    {
+      "stage": "stage_1_epoch_2_batch_10",
+      "used_gb": 5.458164215087891,
+      "percent": 34.5,
+      "timestamp": "2026-04-16T07:54:37.724385"
+    },
+    {
+      "stage": "stage_1_epoch_2_batch_20",
+      "used_gb": 5.452262878417969,
+      "percent": 34.5,
+      "timestamp": "2026-04-16T07:54:38.962145"
+    },
+    {
+      "stage": "stage_1_epoch_2_batch_30",
+      "used_gb": 5.46807861328125,
+      "percent": 34.6,
+      "timestamp": "2026-04-16T07:54:40.300579"
+    },
+    {
+      "stage": "stage_1_epoch_2_batch_40",
+      "used_gb": 5.493907928466797,
+      "percent": 34.8,
+      "timestamp": "2026-04-16T07:54:41.575274"
+    },
+    {
+      "stage": "stage_2_epoch_0_batch_0",
+      "used_gb": 5.4589996337890625,
+      "percent": 34.5,
+      "timestamp": "2026-04-16T07:54:43.911595"
+    },
+    {
+      "stage": "stage_2_epoch_0_batch_10",
+      "used_gb": 5.467380523681641,
+      "percent": 34.6,
+      "timestamp": "2026-04-16T07:54:45.133046"
+    },
+    {
+      "stage": "stage_2_epoch_0_batch_20",
+      "used_gb": 5.476753234863281,
+      "percent": 34.7,
+      "timestamp": "2026-04-16T07:54:46.486339"
+    },
+    {
+      "stage": "stage_2_epoch_0_batch_30",
+      "used_gb": 5.495189666748047,
+      "percent": 34.8,
+      "timestamp": "2026-04-16T07:54:47.724498"
+    },
+    {
+      "stage": "stage_2_epoch_0_batch_40",
+      "used_gb": 5.474723815917969,
+      "percent": 34.6,
+      "timestamp": "2026-04-16T07:54:48.969558"
+    },
+    {
+      "stage": "stage_2_epoch_1_batch_0",
+      "used_gb": 5.505649566650391,
+      "percent": 34.8,
+      "timestamp": "2026-04-16T07:54:51.445470"
+    },
+    {
+      "stage": "stage_2_epoch_1_batch_10",
+      "used_gb": 5.508613586425781,
+      "percent": 34.9,
+      "timestamp": "2026-04-16T07:54:52.691390"
+    },
+    {
+      "stage": "stage_2_epoch_1_batch_20",
+      "used_gb": 5.491035461425781,
+      "percent": 34.7,
+      "timestamp": "2026-04-16T07:54:54.042246"
+    },
+    {
+      "stage": "stage_2_epoch_1_batch_30",
+      "used_gb": 5.763126373291016,
+      "percent": 36.5,
+      "timestamp": "2026-04-16T07:54:55.707192"
+    },
+    {
+      "stage": "stage_2_epoch_1_batch_40",
+      "used_gb": 5.873950958251953,
+      "percent": 37.2,
+      "timestamp": "2026-04-16T07:54:57.236974"
+    },
+    {
+      "stage": "stage_2_epoch_2_batch_0",
+      "used_gb": 5.554531097412109,
+      "percent": 35.1,
+      "timestamp": "2026-04-16T07:54:59.889223"
+    },
+    {
+      "stage": "stage_2_epoch_2_batch_10",
+      "used_gb": 5.531063079833984,
+      "percent": 35.0,
+      "timestamp": "2026-04-16T07:55:01.118225"
+    },
+    {
+      "stage": "stage_2_epoch_2_batch_20",
+      "used_gb": 5.541622161865234,
+      "percent": 35.1,
+      "timestamp": "2026-04-16T07:55:02.312286"
+    },
+    {
+      "stage": "stage_2_epoch_2_batch_30",
+      "used_gb": 5.65667724609375,
+      "percent": 35.8,
+      "timestamp": "2026-04-16T07:55:03.821554"
+    },
+    {
+      "stage": "stage_2_epoch_2_batch_40",
+      "used_gb": 5.750606536865234,
+      "percent": 36.4,
+      "timestamp": "2026-04-16T07:55:05.306732"
+    },
+    {
+      "stage": "stage_3_epoch_0_batch_0",
+      "used_gb": 5.564960479736328,
+      "percent": 35.2,
+      "timestamp": "2026-04-16T07:55:08.135756"
+    },
+    {
+      "stage": "stage_3_epoch_0_batch_10",
+      "used_gb": 5.578254699707031,
+      "percent": 35.3,
+      "timestamp": "2026-04-16T07:55:09.303004"
+    },
+    {
+      "stage": "stage_3_epoch_0_batch_20",
+      "used_gb": 5.520454406738281,
+      "percent": 34.9,
+      "timestamp": "2026-04-16T07:55:10.478897"
+    },
+    {
+      "stage": "stage_3_epoch_0_batch_30",
+      "used_gb": 5.668739318847656,
+      "percent": 35.9,
+      "timestamp": "2026-04-16T07:55:12.063720"
+    },
+    {
+      "stage": "stage_3_epoch_0_batch_40",
+      "used_gb": 5.651920318603516,
+      "percent": 35.8,
+      "timestamp": "2026-04-16T07:55:13.473980"
+    },
+    {
+      "stage": "stage_3_epoch_1_batch_0",
+      "used_gb": 5.626262664794922,
+      "percent": 35.6,
+      "timestamp": "2026-04-16T07:55:15.829479"
+    },
+    {
+      "stage": "stage_3_epoch_1_batch_10",
+      "used_gb": 5.618011474609375,
+      "percent": 35.6,
+      "timestamp": "2026-04-16T07:55:17.149612"
+    },
+    {
+      "stage": "stage_3_epoch_1_batch_20",
+      "used_gb": 5.895656585693359,
+      "percent": 37.3,
+      "timestamp": "2026-04-16T07:55:18.829584"
+    },
+    {
+      "stage": "stage_3_epoch_1_batch_30",
+      "used_gb": 6.076725006103516,
+      "percent": 38.5,
+      "timestamp": "2026-04-16T07:55:20.332045"
+    },
+    {
+      "stage": "stage_3_epoch_1_batch_40",
+      "used_gb": 5.891689300537109,
+      "percent": 37.3,
+      "timestamp": "2026-04-16T07:55:22.097656"
+    },
+    {
+      "stage": "stage_3_epoch_2_batch_0",
+      "used_gb": 5.553802490234375,
+      "percent": 35.1,
+      "timestamp": "2026-04-16T07:55:24.925350"
+    },
+    {
+      "stage": "stage_3_epoch_2_batch_10",
+      "used_gb": 5.571643829345703,
+      "percent": 35.3,
+      "timestamp": "2026-04-16T07:55:26.152911"
+    },
+    {
+      "stage": "stage_3_epoch_2_batch_20",
+      "used_gb": 5.679767608642578,
+      "percent": 35.9,
+      "timestamp": "2026-04-16T07:55:27.398700"
+    },
+    {
+      "stage": "stage_3_epoch_2_batch_30",
+      "used_gb": 5.598457336425781,
+      "percent": 35.4,
+      "timestamp": "2026-04-16T07:55:29.035471"
+    },
+    {
+      "stage": "stage_3_epoch_2_batch_40",
+      "used_gb": 5.593647003173828,
+      "percent": 35.4,
+      "timestamp": "2026-04-16T07:55:30.195479"
+    },
+    {
+      "stage": "after_training",
+      "used_gb": 5.6194610595703125,
+      "percent": 35.6,
+      "timestamp": "2026-04-16T07:55:32.404246"
+    }
+  ],
+  "dataset_samples": 9156,
+  "completion_time": "2026-04-16T07:55:32.405724"
+}

@@ -1,0 +1,119 @@
+{
+  "timestamp": "2026-04-15T15:57:20.414047",
+  "data_sources": {
+    "scalogramv3": {
+      "path": "..\\scalogramv3",
+      "exists": true,
+      "files": [
+        "scalogram_v3_augmented.h5",
+        "scalogram_v3_cosmic.h5",
+        "scalogram_v3_cosmic_final.h5"
+      ]
+    },
+    "earthquake_catalog": {
+      "path": "..\\awal\\earthquake_catalog_2018_2025_merged.csv",
+      "exists": true,
+      "records": 15781
+    },
+    "kp_index": {
+      "path": "..\\awal\\kp_index_2018_2026.csv",
+      "exists": true,
+      "records": 24153
+    },
+    "station_coords": {
+      "path": "..\\awal\\lokasi_stasiun.csv",
+      "exists": true,
+      "stations": 25
+    }
+  },
+  "temporal_coverage": {
+    "total_events": 15781,
+    "date_range": {
+      "min": "2018-01-01T00:52:31.890000",
+      "max": "2025-08-30T23:03:54.588613"
+    },
+    "train_test_split": {
+      "train_events": 13807,
+      "test_events": 1974,
+      "train_percentage": 87.491286990685
+    },
+    "yearly_distribution": {
+      "2018": 2672,
+      "2019": 2918,
+      "2020": 2279,
+      "2021": 2196,
+      "2023": 2850,
+      "2024": 1658,
+      "2025": 1208
+    },
+    "stress_test_coverage": true
+  },
+  "station_completeness": {
+    "total_official_stations": 24,
+    "expected_primary_stations": 8,
+    "available_primary_stations": 8,
+    "missing_primary_stations": 0,
+    "completeness_percentage": 100.0,
+    "available_stations": [
+      "SBG",
+      "SCN",
+      "KPY",
+      "LWA",
+      "LPS",
+      "SRG",
+      "SKB",
+      "CLP"
+    ],
+    "missing_stations": [],
+    "ready_for_8station_processing": true
+  },
+  "magnitude_distribution": {
+    "total_events": 15781,
+    "class_distribution": {
+      "Normal": 8243,
+      "Moderate": 4305,
+      "Small": 2029,
+      "Medium": 912,
+      "Large": 292
+    },
+    "statistics": {
+      "mean": 4.411717720987031,
+      "std": 0.4848863546385385,
+      "min": 1.406994015,
+      "max": 7.735718206,
+      "median": 4.4
+    },
+    "magnitude_bins": [
+      0,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      10.0
+    ],
+    "magnitude_labels": [
+      "Small",
+      "Normal",
+      "Moderate",
+      "Medium",
+      "Large"
+    ],
+    "balanced_distribution": true
+  },
+  "noise_analysis": {
+    "file_analyzed": "scalogram_v3_cosmic_final.h5",
+    "datasets_analyzed": [],
+    "statistical_summary": {},
+    "quality_assessment": "unknown"
+  },
+  "readiness_status": "MOSTLY_READY",
+  "readiness_checks": {
+    "temporal_coverage": true,
+    "station_completeness": true,
+    "magnitude_balance": true,
+    "data_quality": false
+  },
+  "recommendations": [
+    "Review data preprocessing for noise reduction"
+  ]
+}

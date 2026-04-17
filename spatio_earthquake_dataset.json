@@ -1,0 +1,35 @@
+{
+  "creation_time": "2026-04-15T15:01:42.580259",
+  "total_events": 100,
+  "tensor_shape": [
+    100,
+    8,
+    3,
+    224,
+    224
+  ],
+  "stations": [
+    "SBG",
+    "SCN",
+    "KPY",
+    "LWA",
+    "LPS",
+    "SRG",
+    "SKB",
+    "CLP"
+  ],
+  "components": [
+    "H",
+    "D",
+    "Z"
+  ],
+  "train_events": 80,
+  "test_events": 20,
+  "solar_storm_events": 7,
+  "cmr_effectiveness": {
+    "H": 0.85,
+    "D": 0.85,
+    "Z": 0.85
+  },
+  "file_size_gb": 0.8335190350189805
+}

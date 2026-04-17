@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-04-15T15:53:41.355907",
+  "long_tail_analysis": {
+    "detected": false,
+    "large_event_percentage": 2.1608263101197642,
+    "strategy": "standard_training"
+  },
+  "memory_monitoring": {
+    "tensor_shape": [
+      15781,
+      8,
+      3,
+      224,
+      224
+    ],
+    "memory_per_sample_mb": 4.59375,
+    "batch_analysis": {
+      "4": {
+        "batch_memory_gb": 0.0179443359375,
+        "total_memory_gb": 0.0538330078125,
+        "recommended": true
+      },
+      "8": {
+        "batch_memory_gb": 0.035888671875,
+        "total_memory_gb": 0.107666015625,
+        "recommended": true
+      },
+      "16": {
+        "batch_memory_gb": 0.07177734375,
+        "total_memory_gb": 0.21533203125,
+        "recommended": true
+      },
+      "32": {
+        "batch_memory_gb": 0.1435546875,
+        "total_memory_gb": 0.4306640625,
+        "recommended": true
+      },
+      "64": {
+        "batch_memory_gb": 0.287109375,
+        "total_memory_gb": 0.861328125,
+        "recommended": true
+      }
+    },
+    "recommended_batch_size": 64,
+    "high_resolution_temporal": false
+  },
+  "training_stability": {
+    "loss_monitoring": {
+      "plateau_patience": 10,
+      "min_delta": 0.0001,
+      "early_stopping_patience": 25,
+      "lr_reduction_factor": 0.5,
+      "lr_reduction_patience": 10
+    },
+    "validation_monitoring": {
+      "check_frequency": 1,
+      "save_best_model": true,
+      "metric_priority": [
+        "f1_score",
+        "accuracy",
+        "loss"
+      ],
+      "overfitting_threshold": 0.1
+    },
+    "gradient_monitoring": {
+      "clip_grad_norm": 1.0,
+      "log_grad_norm": true,
+      "detect_gradient_explosion": true
+    },
+    "memory_monitoring": {
+      "log_gpu_memory": true,
+      "memory_warning_threshold": 0.85,
+      "clear_cache_frequency": 10
+    }
+  },
+  "solar_storm_impact": {
+    "error": "Invalid comparison between dtype=datetime64[ns, UTC] and Timestamp"
+  },
+  "recommendations": [
+    "\ud83d\udcc9 Watch Stage 1 loss - should drop dramatically in first 5 epochs",
+    "\ud83c\udf9b\ufe0f  Use learning rate scheduling with ReduceLROnPlateau",
+    "\u23f9\ufe0f  Implement early stopping with patience=25",
+    "\ud83d\udcbe Save model checkpoints every epoch during Stage 1",
+    "\ud83c\udfc6 Prepare Attention Maps for station sensitivity analysis",
+    "\ud83d\uddfa\ufe0f  Generate Confusion Matrix for each magnitude class",
+    "\ud83d\udcca Create ROC curves for binary classification performance",
+    "\ud83c\udfaf Validate Dobrovolsky radius effectiveness in predictions"
+  ]
+}

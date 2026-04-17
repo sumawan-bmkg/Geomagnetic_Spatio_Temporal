@@ -1,0 +1,186 @@
+# Configuration file for preprocessing pipeline
+# Spatio-Temporal Earthquake Precursor Analysis
+
+# Data Reading Configuration
+data_reader:
+  # File format settings
+  block_size: 10230  # 30 + 17*600 bytes per block
+  records_per_block: 600
+  record_size: 17
+  
+  # Quality control thresholds
+  quality_control:
+    h_threshold: 80000  # nT
+    d_threshold: 80000  # degrees  
+    z_threshold: 80000  # nT
+    ix_threshold: 3000  # nT
+    iy_threshold: 3000  # nT
+    temp_threshold: 300  # °C
+    voltage_threshold: 24  # V
+  
+  # Scaling factors
+  scaling:
+    magnetic_components: 0.01  # H, D, Z scaling
+    current_components: 0.1    # IX, IY scaling
+    temperature: 0.01          # Temperature scaling
+    voltage: 0.1               # Voltage scaling
+
+# Signal Processing Configuration
+signal_processor:
+  # Sampling rate
+  sampling_rate: 1.0  # Hz
+  
+  # ULF frequency band (optimized for earthquake precursors)
+  ulf_band:
+    low_freq: 0.01   # Hz (100 seconds period)
+    high_freq: 0.1   # Hz (10 seconds period)
+  
+  # PC3 pulsation band
+  pc3_band:
+    low_freq: 0.022  # Hz (45 seconds period)
+    high_freq: 0.1   # Hz (10 seconds period)
+  
+  # Filter parameters
+  filter:
+    order: 4         # Butterworth filter order
+    type: "butterworth"
+    zero_phase: true # Use filtfilt for zero-phase filtering
+  
+  # Processing options
+  processing:
+    interpolate_nan: true
+    apply_quality_control: true
+
+# Scalogram Processing Configuration
+scalogram_processor:
+  # Wavelet parameters
+  wavelet:
+    type: "morl"     # Morlet wavelet
+    
+  # Frequency analysis range
+  frequency_range:
+    min_freq: 0.005  # Hz (200 seconds period)
+    max_freq: 0.2    # Hz (5 seconds period)
+    n_scales: 50     # Number of scales for CWT
+  
+  # ULF analysis parameters
+  ulf_analysis:
+    freq_min: 0.01   # Hz
+    freq_max: 0.1    # Hz
+    
+  # Visualization parameters
+  visualization:
+    colormap: "jet"
+    log_scale: true
+    dpi: 150
+    figsize: [14, 8]
+    
+  # Feature extraction
+  features:
+    compute_power: true
+    compute_phase: true
+    extract_ulf_features: true
+    time_averaging: true
+
+# Output Configuration
+output:
+  # Directory structure
+  directories:
+    base_output: "outputs"
+    signal_processing: "signal_processing"
+    scalograms: "scalograms"
+    features: "features"
+    logs: "logs"
+  
+  # File formats
+  formats:
+    plots: "png"
+    data: "npz"
+    logs: "log"
+  
+  # Plot settings
+  plots:
+    save_plots: true
+    show_plots: false
+    high_resolution: true
+    transparent_background: false
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Log files
+  files:
+    main_log: "preprocessing.log"
+    error_log: "errors.log"
+  
+  # Console output
+  console:
+    enabled: true
+    level: "INFO"
+
+# Station Configuration
+stations:
+  # Default station parameters
+  default:
+    timezone: "UTC"
+    sampling_rate: 1.0
+    data_format: "FRG604RC"
+  
+  # Station-specific settings (example)
+  ALR:
+    name: "Alor"
+    location: [8.2, 124.4]  # [lat, lon]
+    elevation: 100  # meters
+    
+  # Add more stations as needed
+  # STATION_CODE:
+  #   name: "Station Name"
+  #   location: [lat, lon]
+  #   elevation: elevation_meters
+
+# Processing Pipeline Configuration
+pipeline:
+  # Processing steps
+  steps:
+    - "data_reading"
+    - "quality_control"
+    - "signal_processing"
+    - "scalogram_analysis"
+    - "feature_extraction"
+  
+  # Parallel processing
+  parallel:
+    enabled: false
+    n_jobs: -1  # Use all available cores
+  
+  # Memory management
+  memory:
+    chunk_size: 86400  # Process in daily chunks
+    clear_intermediate: true
+  
+  # Error handling
+  error_handling:
+    continue_on_error: true
+    save_error_log: true
+    retry_attempts: 3
+
+# Validation Configuration
+validation:
+  # Data validation
+  data_checks:
+    check_continuity: true
+    check_range: true
+    check_sampling_rate: true
+    max_gap_seconds: 300  # Maximum allowed data gap
+  
+  # Quality metrics
+  quality_metrics:
+    min_valid_percentage: 80  # Minimum valid data percentage
+    max_noise_level: 100      # Maximum acceptable noise level (nT)
+  
+  # Output validation
+  output_checks:
+    verify_file_creation: true
+    check_plot_generation: true

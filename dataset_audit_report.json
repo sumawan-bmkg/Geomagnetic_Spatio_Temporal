@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-15T16:36:41.523322",
+  "dataset_path": "real_earthquake_dataset.h5",
+  "file_exists": true,
+  "metadata_check": {
+    "file_attributes": {
+      "creation_time": "2026-04-15T15:57:20.691505",
+      "data_source": "scalogramv3_real_data",
+      "n_stations": "8",
+      "stations": "['SBG' 'SCN' 'KPY' 'LWA' 'LPS' 'SRG' 'SKB' 'CLP']",
+      "test_events": "1974",
+      "test_start_date": "2024-07-01",
+      "total_events": "15781",
+      "train_end_date": "2024-06-30",
+      "train_events": "13807"
+    },
+    "synthetic_flags_found": [
+      [
+        "data_source",
+        "scalogramv3_real_data"
+      ]
+    ],
+    "creation_time": "2026-04-15T15:57:20.691505",
+    "tensor_shape": "unknown",
+    "has_suspicious_flags": true
+  },
+  "event_id_check": {},
+  "statistical_check": {},
+  "station_mapping_check": {},
+  "final_verdict": "ERROR"
+}

@@ -1,0 +1,483 @@
+{
+  "timestamp": "2026-04-16T14:04:53.291237",
+  "loss_collapse_location": "Batch 100, Epoch 1",
+  "primary_issues": [
+    "CRITICAL: Uniform label batches detected - shuffling issue",
+    "CRITICAL: All binary targets = 1.0 - no negative samples",
+    "WARNING: Many zero gradients detected"
+  ],
+  "audit_results": {
+    "uniformity_check": {
+      "total_batches_analyzed": 10,
+      "uniform_label_batches": 10,
+      "identical_prediction_batches": 1,
+      "batch_details": [
+        {
+          "batch_idx": 0,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.4609178900718689,
+          "pred_variance": 6.824357114965096e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.46427613496780396,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.4618757665157318,
+            0.4577050805091858,
+            0.46167635917663574,
+            0.46272847056388855,
+            0.46427613496780396,
+            0.4577050805091858,
+            0.4577050805091858,
+            0.4636709988117218
+          ]
+        },
+        {
+          "batch_idx": 1,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.46019959449768066,
+          "pred_variance": 3.86506280847243e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.46236303448677063,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.461988240480423,
+            0.4613569974899292,
+            0.4577050805091858,
+            0.4617147445678711,
+            0.46105849742889404,
+            0.46236303448677063,
+            0.4577050805091858,
+            0.4577050805091858
+          ]
+        },
+        {
+          "batch_idx": 2,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.46220195293426514,
+          "pred_variance": 5.905561920371838e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.4666939973831177,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.46078938245773315,
+            0.4666939973831177,
+            0.46160534024238586,
+            0.4619006812572479,
+            0.4577050805091858,
+            0.4622196853160858,
+            0.4624119997024536,
+            0.46428945660591125
+          ]
+        },
+        {
+          "batch_idx": 3,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.4583141803741455,
+          "pred_variance": 2.596955027911463e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.46257781982421875,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.4577050805091858,
+            0.4577050805091858,
+            0.4577050805091858,
+            0.46257781982421875,
+            0.4577050805091858,
+            0.4577050805091858,
+            0.4577050805091858,
+            0.4577050805091858
+          ]
+        },
+        {
+          "batch_idx": 4,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.46183592081069946,
+          "pred_variance": 2.941551201729453e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.4636152386665344,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.46232298016548157,
+            0.4615931510925293,
+            0.46333470940589905,
+            0.46248146891593933,
+            0.4577050805091858,
+            0.46140342950820923,
+            0.4636152386665344,
+            0.46223124861717224
+          ]
+        },
+        {
+          "batch_idx": 5,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.46087682247161865,
+          "pred_variance": 4.403999355417909e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.46358993649482727,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.4610459804534912,
+            0.4577050805091858,
+            0.46133679151535034,
+            0.4606562852859497,
+            0.4577050805091858,
+            0.46358993649482727,
+            0.4614216089248657,
+            0.46355366706848145
+          ]
+        },
+        {
+          "batch_idx": 6,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.4620465934276581,
+          "pred_variance": 8.236181656684494e-07,
+          "pred_min": 0.46136435866355896,
+          "pred_max": 0.4641912579536438,
+          "identical_predictions": "True",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.4641912579536438,
+            0.46151524782180786,
+            0.46136435866355896,
+            0.4626865088939667,
+            0.4613969922065735,
+            0.46156394481658936,
+            0.4616260826587677,
+            0.46202829480171204
+          ]
+        },
+        {
+          "batch_idx": 7,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.46096566319465637,
+          "pred_variance": 2.288326868438162e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.4629422128200531,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.4613193869590759,
+            0.46256959438323975,
+            0.4577050805091858,
+            0.4615739583969116,
+            0.4608316421508789,
+            0.4629422128200531,
+            0.4602823853492737,
+            0.4605010151863098
+          ]
+        },
+        {
+          "batch_idx": 8,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.4601820707321167,
+          "pred_variance": 4.148474999965401e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.4637119770050049,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.4608074128627777,
+            0.4577050805091858,
+            0.46237748861312866,
+            0.4594854414463043,
+            0.4637119770050049,
+            0.46095356345176697,
+            0.4577050805091858,
+            0.45871061086654663
+          ]
+        },
+        {
+          "batch_idx": 9,
+          "target_unique_values": [
+            1.0
+          ],
+          "target_uniformity": true,
+          "all_targets_same": true,
+          "target_value_if_uniform": "1.0",
+          "pred_mean": 0.4610986113548279,
+          "pred_variance": 4.906070898869075e-06,
+          "pred_min": 0.4577050805091858,
+          "pred_max": 0.464598685503006,
+          "identical_predictions": "False",
+          "binary_targets": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "binary_predictions": [
+            0.46144425868988037,
+            0.4612187445163727,
+            0.4577050805091858,
+            0.464598685503006,
+            0.46212002635002136,
+            0.4612339735031128,
+            0.4577050805091858,
+            0.46276307106018066
+          ]
+        }
+      ]
+    },
+    "target_leakage": {
+      "leakage_patterns_found": [],
+      "binary_target_unique": [
+        1.0
+      ],
+      "magnitude_target_unique": [
+        1,
+        2,
+        3
+      ],
+      "binary_distribution": {
+        "mean": 1.0,
+        "std": 0.0,
+        "all_ones": true
+      },
+      "sample_targets": [
+        {
+          "binary": 1.0,
+          "magnitude_class": 3,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 1,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 2,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 1,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 2,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 2,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 1,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 1,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 1,
+          "distance": 100.0
+        },
+        {
+          "binary": 1.0,
+          "magnitude_class": 2,
+          "distance": 100.0
+        }
+      ]
+    },
+    "numerical_stability": {
+      "test_logits": [
+        10.0,
+        -10.0,
+        0.0,
+        100.0,
+        -100.0
+      ],
+      "test_targets": [
+        1.0,
+        0.0,
+        0.5,
+        1.0,
+        0.0
+      ],
+      "sigmoid_probs": [
+        0.9999545812606812,
+        4.539787187241018e-05,
+        0.5,
+        1.0,
+        0.0
+      ],
+      "bce_loss": 0.13864760100841522,
+      "bce_logits_loss": 0.1386476755142212,
+      "has_nan": "tensor(False)",
+      "has_inf": "tensor(False)",
+      "stability_issue": "tensor(False)"
+    },
+    "gradient_flow": {
+      "loss_value": 0.7316952347755432,
+      "total_parameters_with_grad": 249,
+      "key_layer_gradients": {
+        "backbone.features.0.0.weight": {
+          "mean": -0.0001856025482993573,
+          "std": 0.0036968702916055918,
+          "max": 0.01840406283736229,
+          "min": -0.024612803012132645,
+          "is_zero": false,
+          "is_nan": false,
+          "is_inf": false
+        },
+        "hierarchical_heads.binary_head.0.weight": "Not found"
+      },
+      "gradient_summary": {
+        "zero_gradients": 14,
+        "nan_gradients": 0,
+        "inf_gradients": 0
+      }
+    }
+  },
+  "recommended_fixes": [
+    "Replace nn.BCELoss() with nn.BCEWithLogitsLoss()",
+    "Remove nn.Sigmoid() from model output",
+    "Reduce learning rate from 0.001 to 1e-4",
+    "Add gradient clipping with max_norm=1.0",
+    "Fix dataset shuffling and target distribution",
+    "Add label smoothing for binary classification"
+  ]
+}

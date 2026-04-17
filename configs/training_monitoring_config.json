@@ -1,0 +1,29 @@
+{
+  "loss_monitoring": {
+    "plateau_patience": 10,
+    "min_delta": 0.0001,
+    "early_stopping_patience": 25,
+    "lr_reduction_factor": 0.5,
+    "lr_reduction_patience": 10
+  },
+  "validation_monitoring": {
+    "check_frequency": 1,
+    "save_best_model": true,
+    "metric_priority": [
+      "f1_score",
+      "accuracy",
+      "loss"
+    ],
+    "overfitting_threshold": 0.1
+  },
+  "gradient_monitoring": {
+    "clip_grad_norm": 1.0,
+    "log_grad_norm": true,
+    "detect_gradient_explosion": true
+  },
+  "memory_monitoring": {
+    "log_gpu_memory": true,
+    "memory_warning_threshold": 0.85,
+    "clear_cache_frequency": 10
+  }
+}
