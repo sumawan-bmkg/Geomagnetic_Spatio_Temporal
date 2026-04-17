@@ -86,6 +86,13 @@ This project implements the world's first **physics-informed spatio-temporal AI 
 - **Quiet Events (Kp < 3)**: 1,102 events (54.6% coverage)
 - **Validation Ready**: ✅ YES (CMR robustness testing enabled)
 
+### Download Dataset
+Due to size constraints (100GB+), the full HDF5 dataset and pre-trained weights are hosted on Zenodo:
+> [!IMPORTANT]
+> **[Direct Link to Zenodo Repository](https://zenodo.org/record/19447128)**
+> DOI: 10.5281/zenodo.19447128
+
+Alternatively, a small sample HDF5 is provided in `data/sample_data.h5` for quick testing.
 ---
 
 ## 🚀 Installation and Usage
